@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tip Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-teal-100 font-mono flex items-center justify-center h-screen">
+  <div class="w-full max-w-4xl bg-white rounded-2xl shadow-lg flex p-8 gap-8">
+    <!-- Left Side -->
+    <div class="flex-1 space-y-6">
+      <h1 class="text-center tracking-widest text-gray-600 text-xl font-bold">SPLITTER</h1>
+      
+      <!-- Bill -->
+      <div>
+        <label class="text-gray-600 block mb-2">Bill</label>
+        <input id="bill" type="number" class="w-full p-2 rounded-md bg-gray-100 text-right" placeholder="0">
+      </div>
+
+      <!-- Tip % -->
+      <div>
+        <label class="text-gray-600 block mb-2">Select Tip %</label>
+        <div class="grid grid-cols-3 gap-2">
+          <button class="tip-btn bg-teal-800 text-white py-2 rounded-md">5%</button>
+          <button class="tip-btn bg-teal-800 text-white py-2 rounded-md">10%</button>
+          <button class="tip-btn bg-teal-800 text-white py-2 rounded-md">15%</button>
+          <button class="tip-btn bg-teal-800 text-white py-2 rounded-md">25%</button>
+          <button class="tip-btn bg-teal-800 text-white py-2 rounded-md">50%</button>
+          <input id="customTip" type="number" class="bg-gray-100 rounded-md text-right px-2" placeholder="Custom">
+        </div>
+      </div>
+
+      <!-- Number of People -->
+      <div>
+        <label class="text-gray-600 block mb-2">Number of People</label>
+        <input id="people" type="number" class="w-full p-2 rounded-md bg-gray-100 text-right" placeholder="0">
+      </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="flex-1 bg-teal-900 text-white p-6 rounded-2xl flex flex-col justify-between">
+      <div class="space-y-6">
+        <div class="flex justify-between">
+          <div>
+            <p class="text-sm">Tip Amount</p>
+            <p class="text-xs text-teal-300">/ person</p>
+          </div>
+          <p id="tipAmount" class="text-2xl font-bold">$0.00</p>
+        </div>
+        <div class="flex justify-between">
+          <div>
+            <p class="text-sm">Total</p>
+            <p class="text-xs text-teal-300">/ person</p>
+          </div>
+          <p id="total" class="text-2xl font-bold">$0.00</p>
+        </div>
+      </div>
+      <button id="resetBtn" class="mt-6 bg-teal-700 py-2 rounded-md text-white font-semibold hover:bg-teal-600 disabled:opacity-30" disabled>RESET</button>
+    </div>
+  </div>
+  
+  <div class="attribution fixed bottom-2 text-center w-full text-gray-500 text-xs">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="underline">Frontend Mentor</a>. 
+  Coded by <a href="#" class="underline">Arash Soltani Hemmat</a>.
+    </div>
+  <!-- JavaScript -->
+  <script src="./src/main.js"></script>
+   
+  
+</body>
+
+</html>
